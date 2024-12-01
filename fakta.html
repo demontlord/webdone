@@ -5,7 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengenalan Tentang Bumi</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <style>
+        /* Gaya untuk efek gambar */
+        .zoom {
+            transition: transform 0.2s; /* Efek transisi */
+        }
+
+        .zoom:hover {
+            transform: scale(1.1); /* Membesar gambar saat hover */
+        }
+
+        /* Gaya untuk informasi tambahan */
+        .additional-info {
+            display: none; /* Sembunyikan informasi tambahan */
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #54b8fc;
+        }
+
+        /* Animasi untuk efek fade-in */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -89,5 +117,28 @@
     <footer>
         <p>Development by Nanang</p>
     </footer>
+
+    <script>
+        // Menambahkan event listener untuk setiap tombol
+        document.querySelectorAll('.toggle-info').forEach(button => {
+            button.addEventListener('click', function() {
+                const additionalInfo = this.nextElementSibling;
+                if (additionalInfo.style.display === 'none' || additionalInfo.style.display === '') {
+                    additionalInfo.style.display = 'block';
+                    this.textContent = 'Sembunyikan Informasi Tambahan';
+                } else {
+                    additionalInfo.style.display = 'none';
+                    this.textContent = 'Tampilkan Informasi Tambahan';
+                }
+            });
+        });
+
+        // Menambahkan efek fade-in saat halaman dimuat
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.fade-in').forEach((element) => {
+                element.classList.add('visible');
+            });
+        });
+    </script>
 </body>
 </html>

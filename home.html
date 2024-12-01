@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengenalan Tentang Bumi</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <style>
+        /* Gaya untuk efek gambar */
+        .zoom {
+            transition: transform 0.2s; /* Efek transisi */
+        }
+
+        .zoom:hover {
+            transform: scale(1.1); /* Membesar gambar saat hover */
+        }
+
+        /* Tambahkan CSS untuk efek fade-in */
+        section {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        section.fade-in {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -40,7 +58,7 @@
                         paling tidak sekitar 3,5 miliar tahun yang lalu. Biosfer Bumi kemudian secara perlahan 
                         mengubah atmosfer dan kondisi fisik dasar lainnya, yang memungkinkan terjadinya perkembangbiakan 
                         organisme serta pembentukan lapisan ozon, yang bersama medan magnet Bumi menghalangi radiasi surya 
-                        berbahaya dan mengizinkan makhluk hidup mikroskopis untuk berkembang biak dengan aman di daratan. 
+                        berbahaya dan mengizinkan makhluk hidup mikroskopis untuk berkembang biak dengan aman di daratan.
                     </p>
                 </div>
                 <div class="three">
@@ -61,5 +79,21 @@
     <footer>
         <p>Development by Nanang</p>
     </footer>
+    
+    <script>
+        // Menambahkan efek scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('fade-in');
+                } else {
+                    section.classList.remove('fade-in');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

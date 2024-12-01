@@ -108,7 +108,7 @@ p {
     background:rgb(209, 252, 255);
     grid-template-columns: 220px auto 300px auto 220px;
     width: 100%;
-    height: 560px;
+    height: 580px;
     gap: 10px;
 }
 .kolom1{
@@ -165,32 +165,3 @@ p {
     border-radius: 10px;
     margin-right: 15px;
 }    
-
- /* Gaya untuk efek gambar */
- .zoom {
-    transition: transform 0.2s; /* Efek transisi */
-}
-
-.zoom:hover {
-    transform: scale(1.1); /* Membesar gambar saat hover */
-}
-
-
-/* Gaya untuk informasi tambahan */
-.additional-info {
-    display: none; /* Sembunyikan informasi tambahan */
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: rgb(209, 252, 255);
-}
-
-/* Animasi untuk efek fade-in */
-.fade-in {
-    opacity: 0;
-    transition: opacity 1.5s ease-in;
-}
-
-.fade-in.visible {
-    opacity: 1;
-}
