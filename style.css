@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(209, 252, 255);
+}
+
+header {
+    background: linear-gradient(
+    to right,
+    rgba(200, 107, 142, 1),
+    rgba(218, 105, 250, 1),
+    rgba(110, 125, 253, 1) );
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+main {
+    margin-top: 60px;
+    border-top: 2px;
+    padding: 60px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #765eff;
+}
+
+nav a {
+    padding: 14px 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+    
+nav a:hover {
+    background-color: #f0c9f0;
+    color: rgb(66, 48, 223);
+}
+    
+li{
+    padding: 5px;
+}
+    
+section {
+    padding: 20px;
+}
+    
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    
+}
+    
+h2 {
+    color: #4CAF50;
+}
+    
+p {
+    line-height: 1.6;
+    margin-top: 15px ;
+}
+
+.white{
+    display: grid;
+    background:rgb(208, 251, 254);
+    grid-template-columns: 260px auto 260px;
+    width: 100%;
+    height: 430px;
+    gap: 10px;
+}
+.one{
+    background-color: rgb(159, 216, 255);
+    text-align: center;
+}
+.two{
+    background-color: rgb(204, 141, 255);
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+.two img {
+    width: 450px;
+    height: 250px;
+    float: left;
+    border: 3px solid rgb(255, 153, 0);
+    border-radius: 10px;
+    margin-right: 15px;
+}    
+.three{
+    background-color: aqua;
+    text-align: center;
+}
+
+.dark{
+    display: grid;
+    background:rgb(209, 252, 255);
+    grid-template-columns: 220px auto 300px auto 220px;
+    width: 100%;
+    height: 560px;
+    gap: 10px;
+}
+.kolom1{
+    background-color: rgb(159, 216, 255);
+    text-align: center;
+}
+.kolom2{
+    background-color: rgb(162, 141, 255);
+    text-align: center;
+}
+.kolom3{
+    background-color: rgb(103, 151, 255);
+    text-align: center;
+}
+.kolom4{
+    background-color: rgb(114, 175, 255);
+    text-align: center;
+}
+.kolom5{
+    background-color: rgb(163, 130, 255);
+    text-align: center;
+ }
+.kolom1 img {
+    width: 95%;
+    border-radius: 25%;
+    border: 3px solid rgb(236, 172, 255);
+}
+.kolom2 img {
+    width: 60%;
+    border-radius: 25%;
+    border: 3px solid rgb(236, 172, 255);
+}
+.kolom3 img {
+    width: 60%;
+    border-radius: 25%;
+    border: 3px solid rgb(236, 172, 255);
+}
+.kolom4 img {
+    width: 60%;
+    border-radius: 25%;
+    border: 3px solid rgb(236, 172, 255);
+}
+.kolom5 img {
+    width: 70%;
+    border-radius: 25%;
+    border: 3px solid rgb(236, 172, 255);
+}
+
+.lingkungan img{
+    width: 450px;
+    height: 250px;
+    float: left;
+    border: 3px solid rgb(255, 153, 0);
+    border-radius: 10px;
+    margin-right: 15px;
+}    
+
+ /* Gaya untuk efek gambar */
+ .zoom {
+    transition: transform 0.2s; /* Efek transisi */
+}
+
+.zoom:hover {
+    transform: scale(1.1); /* Membesar gambar saat hover */
+}
+
+
+/* Gaya untuk informasi tambahan */
+.additional-info {
+    display: none; /* Sembunyikan informasi tambahan */
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: rgb(209, 252, 255);
+}
+
+/* Animasi untuk efek fade-in */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
